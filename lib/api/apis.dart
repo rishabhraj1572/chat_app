@@ -1,3 +1,6 @@
+import 'dart:developer';
+import 'dart:io';
+
 import 'package:chat_app/models/chat_user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -61,4 +64,28 @@ class APIs {
         .doc(user.uid)
         .update({'name': me.name, 'about': me.about});
   }
+
+  static Future<void> updateProfilePICTURE(File file) async {
+    final ext = file.path.split('.').last;
+    final ref = storage.ref().child('profile_pictures/${user.uid}.$ext');
+    ref.putFile(file, SettableMetadata(contentType: 'image/$ext')).then((p0) {
+      log('Data Transferred : ${p0.bytesTransferred / 1000} kb');
+    });
+    me.image =await ref.getDownloadURL();
+    await firestore
+        .collection('users')
+        .doc(user.uid)
+        .update({'image': me.image});
+  }
+
+
+
+
+  //chat screen related api
+static Stream<QuerySnapshot<Map<String, dynamic>>> getAllMessages() {
+    return firestore
+        .collection('message')
+        .snapshots();
+  }
+
 }
