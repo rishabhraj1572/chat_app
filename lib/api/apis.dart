@@ -100,8 +100,25 @@ class APIs {
         type: 'text',
         sent: time,
         fromId: user.uid);
-    final ref =
-        firestore.collection('chats/${getConversationID(chatUser.id)}/messages/');
+    final ref = firestore
+        .collection('chats/${getConversationID(chatUser.id)}/messages/');
     await ref.doc(time).set(message.toJson());
+  }
+
+  //update read status
+  static Future<void> updateReadStatus(Message message) async {
+    firestore
+        .collection('chats/${getConversationID(message.fromId)}/messages/')
+        .doc(message.sent)
+        .update({'read': DateTime.now().microsecondsSinceEpoch.toString()});
+  }
+
+  static Stream<QuerySnapshot<Map<String, dynamic>>> getLastMessage(
+      ChatUser user) {
+    return firestore
+        .collection('chats/${getConversationID(user.id)}/messages/')
+        .orderBy('sent', descending: true)
+        .limit(1)
+        .snapshots();
   }
 }

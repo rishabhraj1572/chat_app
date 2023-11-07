@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:chat_app/api/apis.dart';
+import 'package:chat_app/helper/my_date_util.dart';
 import 'package:chat_app/main.dart';
 import 'package:chat_app/models/message.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +24,12 @@ class _MessageCardState extends State<MessageCard> {
   }
 
   Widget _blueMessage() {
+    //upade last read meaage
+    if (widget.message.read.isEmpty) {
+      APIs.updateReadStatus(widget.message);
+      log('Message Read Updated');
+    }
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -30,9 +39,9 @@ class _MessageCardState extends State<MessageCard> {
             margin: EdgeInsets.symmetric(
                 horizontal: mq.width * .04, vertical: mq.height * .01),
             decoration: BoxDecoration(
-                color: Color.fromARGB(255, 221, 245, 255),
+                color: const Color.fromARGB(255, 221, 245, 255),
                 border: Border.all(color: Colors.lightBlue),
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30),
                     bottomRight: Radius.circular(30))),
@@ -45,8 +54,9 @@ class _MessageCardState extends State<MessageCard> {
         Padding(
           padding: EdgeInsets.only(right: mq.width * .04),
           child: Text(
-            widget.message.sent,
-            style: TextStyle(fontSize: 13, color: Colors.black54),
+            MyDateUtil.getFormattedTime(
+                context: context, time: widget.message.sent),
+            style: const TextStyle(fontSize: 13, color: Colors.black54),
           ),
         ),
       ],
@@ -62,17 +72,19 @@ class _MessageCardState extends State<MessageCard> {
             SizedBox(
               width: mq.width * .04,
             ),
-            const Icon(
-              Icons.done_all_rounded,
-              color: Colors.blue,
-              size: 20,
-            ),
+            if (widget.message.read.isNotEmpty)
+              const Icon(
+                Icons.done_all_rounded,
+                color: Colors.blue,
+                size: 20,
+              ),
             const SizedBox(
               width: 2,
             ),
             Text(
-              widget.message.sent,
-              style: TextStyle(fontSize: 13, color: Colors.black54),
+              MyDateUtil.getFormattedTime(
+                  context: context, time: widget.message.sent),
+              style: const TextStyle(fontSize: 13, color: Colors.black54),
             ),
           ],
         ),
