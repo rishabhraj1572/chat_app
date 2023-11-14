@@ -62,7 +62,11 @@ class _ChatUserCardState extends State<ChatUserCard> {
                   //leading: const CircleAvatar(child: Icon(CupertinoIcons.person)),
                   title: Text(widget.user.name),
                   subtitle: Text(
-                    _message != null ? _message!.msg : widget.user.about,
+                    _message != null
+                        ? _message!.type == 'image'
+                            ? 'Image'
+                            : _message!.msg
+                        : widget.user.about,
                     maxLines: 1,
                   ),
                   trailing: _message == null
@@ -78,7 +82,8 @@ class _ChatUserCardState extends State<ChatUserCard> {
                                   borderRadius: BorderRadius.circular(15)),
                             )
                           : Text(
-                              MyDateUtil.getLastMessageTime(context: context, time: _message!.sent),
+                              MyDateUtil.getLastMessageTime(
+                                  context: context, time: _message!.sent),
                               style: TextStyle(color: Colors.black54),
                             ));
             },

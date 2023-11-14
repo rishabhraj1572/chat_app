@@ -9,6 +9,7 @@ import 'package:chat_app/main.dart';
 import 'package:chat_app/models/chat_user.dart';
 import 'package:chat_app/screens/auth/login_screen.dart';
 import 'package:chat_app/widgets/chat_user_card.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -45,10 +46,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
           backgroundColor: const Color.fromARGB(255, 238, 99, 99),
           onPressed: () async {
             Dialogs.showProgressBar(context);
+
+            await APIs.updateActiveStatus(false);
             await APIs.auth.signOut().then(
               (value) async {
                 await GoogleSignIn().signOut().then((value) {
                   Navigator.pop(context);
+
+                  APIs.auth = FirebaseAuth.instance;
 
                   //2 times
                   Navigator.pop(context);
@@ -225,8 +230,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       onPressed: () async {
                         final ImagePicker picker = ImagePicker();
                         // Pick an image.
-                        final XFile? image =
-                            await picker.pickImage(source: ImageSource.gallery,imageQuality: 80);
+                        final XFile? image = await picker.pickImage(
+                            source: ImageSource.gallery, imageQuality: 80);
 
                         if (image != null) {
                           setState(() {
@@ -245,8 +250,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       onPressed: () async {
                         final ImagePicker picker = ImagePicker();
                         // Pick an image.
-                        final XFile? image =
-                            await picker.pickImage(source: ImageSource.camera,imageQuality: 80);
+                        final XFile? image = await picker.pickImage(
+                            source: ImageSource.camera, imageQuality: 80);
 
                         if (image != null) {
                           setState(() {
