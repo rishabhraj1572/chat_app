@@ -5,6 +5,7 @@ import 'package:chat_app/main.dart';
 import 'package:chat_app/models/chat_user.dart';
 import 'package:chat_app/models/message.dart';
 import 'package:chat_app/screens/ChatScreen.dart';
+import 'package:chat_app/widgets/dialogs/profile_dialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -47,16 +48,24 @@ class _ChatUserCardState extends State<ChatUserCard> {
               }
 
               return ListTile(
-                  leading: ClipRRect(
-                    borderRadius: BorderRadius.circular(mq.height * 0.3),
-                    child: CachedNetworkImage(
-                      imageUrl: widget.user.image,
-                      width: mq.height * .055,
-                      height: mq.height * .055,
-                      placeholder: (context, url) =>
-                          const CircularProgressIndicator(),
-                      errorWidget: (context, url, error) => const CircleAvatar(
-                          child: Icon(CupertinoIcons.person)),
+                  leading: InkWell(
+                    onTap: () {
+                      showDialog(
+                          context: context,
+                          builder: (_) => ProfileDialog(user: widget.user));
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(mq.height * 0.3),
+                      child: CachedNetworkImage(
+                        imageUrl: widget.user.image,
+                        width: mq.height * .055,
+                        height: mq.height * .055,
+                        placeholder: (context, url) =>
+                            const CircularProgressIndicator(),
+                        errorWidget: (context, url, error) =>
+                            const CircleAvatar(
+                                child: Icon(CupertinoIcons.person)),
+                      ),
                     ),
                   ),
                   //leading: const CircleAvatar(child: Icon(CupertinoIcons.person)),

@@ -21,6 +21,9 @@ dependencies:
   image_picker: ^1.0.4
   firebase_storage: ^11.2.6
   emoji_picker_flutter: ^1.6.3
+  firebase_messaging: ^14.7.4
+  http: ^1.1.0
+  flutter_notification_channel: ^2.0.0
 
 dev_dependencies:
   flutter_test:
