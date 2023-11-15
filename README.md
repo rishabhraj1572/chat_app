@@ -1,4 +1,3 @@
-<div id="coursology-root" style="height: auto;"><br></div>
 <h1># Chat App</h1>
 <p><br></p>
 <p>A streamlined, elegant, and comprehensive chat application built on Dart and Flutter.</p>
@@ -16,12 +15,3 @@
 <p>- Refined UI utilizing the latest Material Widgets</p>
 <p><br></p>
 <p>For any suggestions or feedback, feel free to reach out via email. 😊</p>
-<div class="chakra-portal">
-    <div role="region" aria-live="polite" aria-label="Notifications" id="chakra-toast-manager-top" style="position: fixed; z-index: var(--toast-z-index, 5500); pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; top: env(safe-area-inset-top, 0px); right: env(safe-area-inset-right, 0px); left: env(safe-area-inset-left, 0px);"><br></div>
-    <div role="region" aria-live="polite" aria-label="Notifications" id="chakra-toast-manager-top-left" style="position: fixed; z-index: var(--toast-z-index, 5500); pointer-events: none; display: flex; flex-direction: column; top: env(safe-area-inset-top, 0px); left: env(safe-area-inset-left, 0px);"><br></div>
-    <div role="region" aria-live="polite" aria-label="Notifications" id="chakra-toast-manager-top-right" style="position: fixed; z-index: var(--toast-z-index, 5500); pointer-events: none; display: flex; flex-direction: column; top: env(safe-area-inset-top, 0px); right: env(safe-area-inset-right, 0px);"><br></div>
-    <div role="region" aria-live="polite" aria-label="Notifications" id="chakra-toast-manager-bottom-left" style="position: fixed; z-index: var(--toast-z-index, 5500); pointer-events: none; display: flex; flex-direction: column; bottom: env(safe-area-inset-bottom, 0px); left: env(safe-area-inset-left, 0px);"><br></div>
-    <div role="region" aria-live="polite" aria-label="Notifications" id="chakra-toast-manager-bottom" style="position: fixed; z-index: var(--toast-z-index, 5500); pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; bottom: env(safe-area-inset-bottom, 0px); right: env(safe-area-inset-right, 0px); left: env(safe-area-inset-left, 0px);"><br></div>
-    <div role="region" aria-live="polite" aria-label="Notifications" id="chakra-toast-manager-bottom-right" style="position: fixed; z-index: var(--toast-z-index, 5500); pointer-events: none; display: flex; flex-direction: column; bottom: env(safe-area-inset-bottom, 0px); right: env(safe-area-inset-right, 0px);"><br></div>
-</div>
-<p><br></p>
