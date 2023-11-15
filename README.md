@@ -28,6 +28,7 @@
 						<th>My Profile</th>
 						<th>Chat Screen (Empty)</th>
 						<th>Chat Screen</th>
+						<th>Message Options</th>
 						<th>User Profile</th>
 					</tr>
 				</thead>
@@ -40,6 +41,7 @@
 						<td><img alt="" src="https://github.com/rishabhraj1572/chat_app/blob/master/Screenshots/6.jpg?raw=true" style="height:431px; width:200px" /></td>
 						<td><img alt="" src="https://github.com/rishabhraj1572/chat_app/blob/master/Screenshots/4.jpg?raw=true" style="height:431px; width:200px" /></td>
 						<td><img alt="" src="https://github.com/rishabhraj1572/chat_app/blob/master/Screenshots/2.jpg?raw=true" style="height:431px; width:200px" /></td>
+						<td><img alt="" src="https://github.com/rishabhraj1572/chat_app/blob/master/Screenshots/9.jpg?raw=true" style="height:431px; width:200px" /></td>
 						<td><img alt="" src="https://github.com/rishabhraj1572/chat_app/blob/master/Screenshots/1.jpg?raw=true" style="height:431px; width:200px" /></td>
 					</tr>
 				</tbody>
