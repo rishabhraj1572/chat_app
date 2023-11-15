@@ -1,6 +1,6 @@
 <h1># Chat App</h1>
 <p><br></p>
-<p>A streamlined, elegant, and comprehensive chat application built on Dart and Flutter.</p>
+<p>A streamlined, elegant, and comprehensive chat application built on Flutter Dart.</p>
 <p><br></p>
 <p><span style="font-size: 20px;"><strong>Explore the Full Feature Set:</strong></span></p>
 <p><br></p>
