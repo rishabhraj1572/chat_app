@@ -1,5 +1,5 @@
 <div id="coursology-root" style="height: auto;"><br></div>
-<p><strong><span style="font-size: 24px;">ChatApp</span></strong></p>
+<h1># Chat App</h1>
 <p><br></p>
 <p>A streamlined, elegant, and comprehensive chat application built on Dart and Flutter.</p>
 <p><br></p>
