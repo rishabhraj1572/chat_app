@@ -14,4 +14,38 @@
 <p>- Push notifications for incoming messages</p>
 <p>- Refined UI utilizing the latest Material Widgets</p>
 <p><br></p>
+<table>
+	<thead>
+		<tr>
+			<th>
+			<table>
+				<thead>
+					<tr>
+						<th>Splash</th>
+						<th>Login</th>
+						<th>Home</th>
+						<th>New Message</th>
+						<th>My Profile</th>
+						<th>Chat Screen (Empty)</th>
+						<th>Chat Screen</th>
+						<th>User Profile</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><img alt="" src="https://github.com/rishabhraj1572/chat_app/blob/master/Screenshots/8.jpg?raw=true" style="height:431px; width:200px" /></td>
+						<td><img alt="" src="https://github.com/rishabhraj1572/chat_app/blob/master/Screenshots/5.jpg?raw=true" style="height:431px; width:200px" /></td>
+						<td><img alt="" src="https://github.com/rishabhraj1572/chat_app/blob/master/Screenshots/7.jpg?raw=true" style="height:431px; width:200px" /></td>
+						<td><img alt="" src="https://github.com/rishabhraj1572/chat_app/blob/master/Screenshots/3.jpg?raw=true" style="height:431px; width:200px" /></td>
+						<td><img alt="" src="https://github.com/rishabhraj1572/chat_app/blob/master/Screenshots/6.jpg?raw=true" style="height:431px; width:200px" /></td>
+						<td><img alt="" src="https://github.com/rishabhraj1572/chat_app/blob/master/Screenshots/4.jpg?raw=true" style="height:431px; width:200px" /></td>
+						<td><img alt="" src="https://github.com/rishabhraj1572/chat_app/blob/master/Screenshots/2.jpg?raw=true" style="height:431px; width:200px" /></td>
+						<td><img alt="" src="https://github.com/rishabhraj1572/chat_app/blob/master/Screenshots/1.jpg?raw=true" style="height:431px; width:200px" /></td>
+					</tr>
+				</tbody>
+			</table>
+			</th>
+		</tr>
+	</thead>
+</table>
 <p>For any suggestions or feedback, feel free to reach out via email. 😊</p>
