@@ -245,10 +245,12 @@ class _ChatScreenState extends State<ChatScreen> {
                         });
                       }
                     },
+                    
                     decoration: const InputDecoration(
                         hintText: 'Type Something...',
                         hintStyle: TextStyle(color: Colors.blueAccent),
                         border: InputBorder.none),
+                        textCapitalization: TextCapitalization.sentences,
                   )),
                   IconButton(
                       onPressed: () async {
